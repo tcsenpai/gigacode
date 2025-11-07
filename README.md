@@ -31,15 +31,15 @@ Some commands will require additional dependencies which will be discussed in th
 
 ### Claude Code
 
-`ln -s ~/gigacode ~/.claude/commands/gigacode`
+`ln -s ~/gigacode/commands ~/.claude/commands/gigacode`
 
 ### Codex
 
-`ln -s ~/gigacode ~/.codex/prompts/gigacode`
+`ln -s ~/gigacode/commands ~/.codex/prompts/gigacode`
 
 ## Opencode
 
-`ln -s ~/gigacode ~/.opencode/command/gigacode`
+`ln -s ~/gigacode/commands ~/.opencode/command/gigacode`
 
 ## Commands
 
