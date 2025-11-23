@@ -1,10 +1,14 @@
 Use the following command
 
-`coderabbit review --plain`
+`coderabbit review --plain --type commit`
 
 to generate a plaintext PR review for all the changes committed in this branch, following the Workflow Guidelines defined below.
 
 You will then read them and analyze them to spot hallucinations, false positive or similar invalid issues, then you will compile a new file following the Workflow Guidelines below with a polished review divided by CRITICAL, HIGH, MEDIUM, LOW, OPTIONAL issues with possible fixes.
+
+## Sanity Check
+
+If the coderabbit command isn't available, inform the user that it should be installed
 
 ## Coderabbit command help
 
@@ -44,7 +48,14 @@ You will generate the polished review in a `PR_REVIEW_FINAL.md` file.
 
 You will then delete `PR_REVIEW_RAW.md`.
 
-Your output will be a concise but complete explanation of the review together with actionable suggestions and references to the polished file.
+Your output will be a concise but complete explanation of the review together with actionable suggestions and references to the polished file. You should always list the final findings.
+
+## Error Handling
+
+The review command might fail and will return some error messages. If you find error messages:
+
+a) If there are only error messages inform the user and suggest running the review command again in some minutes (errors on coderabbit side)
+b) If there is a mix of error messages and reviews, warn the user and continue with the usual workflow suggesting to run the review command again after this round
 
 ## Custom instructions
 
