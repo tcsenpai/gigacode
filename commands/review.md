@@ -42,11 +42,11 @@ If you deem necessary, use `-c` with CLAUDE.md or whatever documentation is nece
 
 ## Workflow Guidelines
 
-You will generate the review using the above command redirecting it to a `PR_REVIEW_RAW.md` file.
+You will generate the review using the above command redirecting it to a `claudedocs/PR_REVIEW_RAW.md` file.
 
-You will generate the polished review in a `PR_REVIEW_FINAL.md` file.
+You will generate the polished review in a `claudedocs/PR_REVIEW_FINAL.md` file.
 
-You will then delete `PR_REVIEW_RAW.md`.
+You will then delete `claudedocs/PR_REVIEW_RAW.md`.
 
 Your output will be a concise but complete explanation of the review together with actionable suggestions and references to the polished file. You should always list the final findings.
 
