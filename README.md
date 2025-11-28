@@ -76,13 +76,49 @@ Running this command periodically is advised, especially if the code changes sig
 
 _✅ Supporting Customization_
 
+The `optimize_serena_memories` command is a pretty useful tool that is aimed to Serena users and is useful to condensate and tidy up memories that builds up in Serena.
+
+By default, Serena is pretty conservative with memories and this is a good thing. Anyway, after some intense usage or after some time, memories in Serena (located in .serena/memories) tend to build up and become a bit redundant or outdated.
+
+This command aims to condensate, clean up and clear up Serena memories without deleting important informations and being token efficient. Memories created by the `codemapper` command are preserved.
+
+You can specify more instructions through custom prompts after the command.
+
+**Warning:** while being usually safe, this command has the potential to mess up with your codebase memories. Please either back them up or specify what to keep using custom prompting. Memories considered outdated, reduntant or superseeded will be merged or deleted.
+
 ### Review
 
 _✅ Supporting Customization_
 
+_⚠️Requires CodeRabbit (see above)_
+
+The `review` command conduct an in-depth review of the committed code compared to the default branch (or, if specified by the customization, any other branch) using `coderabbit` CLI tool.
+
+It makes your agent fully aware of the coderabbit CLI tool syntax and functionalities and, by default, examine **committed** files.
+
+It generates a "PR_REVIEW_RAW.md" file in the claudedocs folder, then it will analyze it, detect hallucinations or false positives, compare it to the actual code reviewed and generate a "PR_REVIEW_FINAL.md" file in the claudedocs folder, deleting the raw one.
+
+It will then output to the user a summary of the findings including suggestions, possible autofixes and context-aware comments.
+
+This is a quite powerful tool, and should handle errors in a pretty nice manner.
+
+It can take anywhere from 1 to 10 minutes depending on coderabbit status, plan and number of files to examine.
+
+You can also specify additional instructions using a custom prompt after the command.
+
+By default, CLAUDE.md files are included as additional instructions if present.
+
 ### Simplifier
 
 _✅ Supporting Customization_
+
+***Warning: this command can be highly destructive and should be treated as a dangerous, experimental command***
+
+The `simplifier` command cleans up dead code, tries to remove over engineering and look for leftovers, duplicate logic and unused code.
+
+By default it tries to optimize the entire codebase paying attention not to break features.
+
+It contains many safeguards aimed at being as conservative as possible but always commit before using it so that you can reset changes in case something happens.
 
 ### Beads Related Commands
 
