@@ -12,4 +12,5 @@ Execute /beads_init then proceed to the next paragraph if the ".beads" folder no
 
 ## ONLY IF THE ".beads" folder exists: 
 - Execute `bd onboard` and follow the instructions
-- Report back to user
+- Execute `bd ready --json` to load the current issues
+- Report back to user with a concise message regarding your findings with the bd ready command (if any)
