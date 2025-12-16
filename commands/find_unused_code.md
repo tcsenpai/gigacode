@@ -102,4 +102,15 @@ If the user explicitly ask you to edit files without asking permissions (yolo mo
 
 
 In all three cases, you are expected to provide clear, human readable and human sized reports.
-The user wants you to use knip to analyze dead code and report back a detailed yet readable analysis with suggestion WITHOUT ACTING ON THE 
+
+## Additional instructions
+
+The user might or might not add its instructions to this prompt. If the user wants to add something to this prompt you will find it in the following section:
+
+---
+
+#$ARGUMENTS
+
+---
+
+Anyway, no additional instruction might bypass the Prerequisites or the default behavior described above.

@@ -147,3 +147,26 @@ It provides an automatic way to install beads from the official repository, inst
 This command is, once again, mainly used by `beads_load`. However, it can be used autonomously to set up beads for a specific repository.
 
 The command initialize beads in your repository, installs git hooks for beads and run the `bd_onboard` command to load memories and ensure agentic awareness.
+
+### Find Unused Code
+
+_✅ Supporting Customization_
+
+The `find_unused_code` command leverages [knip](https://knip.dev/) to detect unused code, dependencies, exports, and files in your project.
+
+By default, it uses `bun` to run knip (falling back to `npm` if bun is unavailable). If knip is not configured in your project, the command will automatically set it up using `bun create @knip/config` or `npm init @knip/config`.
+
+The command operates in three modes based on user input:
+
+1. **Analysis Mode (Default)**: Runs knip and provides a detailed, human-readable analysis of findings with suggestions. No code modifications are made.
+
+2. **Approval Mode**: When specified, the agent can edit code to fix issues but will ask for user approval before each change.
+
+3. **YOLO Mode**: When explicitly requested, the agent will automatically fix all issues it finds without asking for permission.
+
+This is particularly useful for maintaining clean codebases by identifying:
+- Unused files
+- Unused dependencies and devDependencies
+- Unused exports and types
+- Duplicate exports
+- Unlisted or unresolved dependencies
