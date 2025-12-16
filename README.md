@@ -2,6 +2,8 @@
 
 An (almost) ready-to-use set of commands for agentig AIs such as codex or Claude Code
 
+![download (1)](https://github.com/user-attachments/assets/f04413d8-d37f-49b7-ad52-e91d599d9b93)
+
 ## What is Gigacode
 
 Gigacode is a set of commands I created for myself aiming at make my workflow as a developer using agentic tools as smooth, useful and integrated as possible.
