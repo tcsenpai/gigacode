@@ -21,6 +21,8 @@ If the output is overwhelming, you can use `-- --max-show-issues` option as spec
 
 Always remember that the following section's arguments are to be used with `-- [flag]` as we are using `bun run` to run the script.
 
+Based on the following section, you are free to decide which options to add to knip, keeping in mind the goal is to help the user to find unused, dead, and similar code/types/functions/etc.
+
 ### knip syntax
 
 Usage: knip [options]
